@@ -95,7 +95,5 @@ vim.keymap.set('v', '<BS>', '"_d', opts)
 vim.keymap.set('i', 'kk', '<Esc>', opts)
 
 -- Command Mode Mappings
--- Save file with <leader>w
---vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
--- should i use ctrls instead? and move tmux prefix to be ctr + a ?
-vim.keymap.set('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
+-- Save file with ctrl + s and enter normal mode
+vim.keymap.set({ 'n', 'i', 's' }, '<C-s>', '<Esc>:w<CR>', { noremap = true, silent = true })
