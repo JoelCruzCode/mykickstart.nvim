@@ -6,8 +6,9 @@ local opts = { noremap = true, silent = true }
 -- Move cursor up
 vim.keymap.set('n', 'i', 'k', opts)
 
--- Move cursor to bottom of view (I think this is a typo)
-vim.keymap.set('n', 'K', 'L', opts)
+-- -- Move cursor to bottom of view (I think this is a typo)
+-- disabled: possibly conflicts with Dictionary look up
+-- vim.keymap.set('n', 'K', 'L', opts)
 
 -- Move cursor left
 vim.keymap.set('n', 'j', 'h', opts)
