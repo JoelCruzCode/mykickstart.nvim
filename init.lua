@@ -713,7 +713,23 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        javascript = {
+          {
+            command = 'prettierd',
+            extra_args = { '--tab-width', '4', '--print-width', '80' },
+          },
+          {
+            command = 'prettier',
+            extra_args = { '--tab-width', '4', '--print-width', '80' },
+            stop_after_first = true,
+          },
+        },
+        html = {
+          {
+            command = 'prettierd',
+            extra_args = { '--tab-width', '4', '--print-width', '80' },
+          },
+        },
       },
     },
   },
